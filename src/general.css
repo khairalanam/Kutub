@@ -52,28 +52,28 @@ nav ul #github {
   width: 2em;
 }
 
-.hero-section, .about-section {
+.hero-section, .about-section, .social-section, .books-section {
   z-index: 1;
   display: flex;
   justify-content: space-between;
   padding-left: 4em;
   padding-right: 0;
 }
-.hero-section .hero-text, .about-section .hero-text {
+.hero-section .hero-text, .about-section .hero-text, .social-section .hero-text, .books-section .hero-text {
   padding-top: 4em;
   display: flex;
   flex-direction: column;
   gap: 2em;
 }
-.hero-section .hero-text h1, .about-section .hero-text h1 {
+.hero-section .hero-text h1, .about-section .hero-text h1, .social-section .hero-text h1, .books-section .hero-text h1 {
   font-weight: 400;
   font-size: 3rem;
 }
-.hero-section .hero-text h1 div, .about-section .hero-text h1 div {
+.hero-section .hero-text h1 div, .about-section .hero-text h1 div, .social-section .hero-text h1 div, .books-section .hero-text h1 div {
   display: inline;
   color: #E5383B;
 }
-.hero-section .btn-search, .about-section .btn-search {
+.hero-section .btn-search, .about-section .btn-search, .social-section .btn-search, .books-section .btn-search {
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
   color: white;
@@ -84,13 +84,13 @@ nav ul #github {
   margin: 0 auto;
   margin-left: 0;
 }
-.hero-section .btn-search:hover, .about-section .btn-search:hover {
+.hero-section .btn-search:hover, .about-section .btn-search:hover, .social-section .btn-search:hover, .books-section .btn-search:hover {
   background-color: #811719;
 }
-.hero-section .btn-search:active, .about-section .btn-search:active {
+.hero-section .btn-search:active, .about-section .btn-search:active, .social-section .btn-search:active, .books-section .btn-search:active {
   background-color: #490809;
 }
-.hero-section .gif-holder, .about-section .gif-holder {
+.hero-section .gif-holder, .about-section .gif-holder, .social-section .gif-holder, .books-section .gif-holder {
   width: 40%;
   display: flex;
   justify-content: center;
@@ -101,10 +101,10 @@ nav ul #github {
   height: 100vh;
   box-shadow: 0px 0px 13em 1em rgba(0, 0, 0, 0.25);
 }
-.hero-section .gif-holder #book-lover, .about-section .gif-holder #book-lover {
+.hero-section .gif-holder #book-lover, .about-section .gif-holder #book-lover, .social-section .gif-holder #book-lover, .books-section .gif-holder #book-lover {
   width: 22em;
 }
-.hero-section .gif-holder #book-lover svg + svg, .about-section .gif-holder #book-lover svg + svg {
+.hero-section .gif-holder #book-lover svg + svg, .about-section .gif-holder #book-lover svg + svg, .social-section .gif-holder #book-lover svg + svg, .books-section .gif-holder #book-lover svg + svg {
   display: none;
 }
 
@@ -117,4 +117,136 @@ footer {
 
 .about-section .hero-text p {
   width: calc(60% - 8em);
+}
+
+.social-section ul {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.social-links {
+  font-size: 2rem;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: #E5383B;
+  transition: 250ms ease;
+}
+.social-links:hover {
+  color: #811719;
+}
+.social-links:active {
+  color: #490809;
+}
+
+.books-section {
+  flex-direction: column;
+  gap: 4em;
+}
+.books-section .search-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-right: 4em;
+}
+.books-section .search-bar h2 {
+  font-weight: 500;
+}
+.books-section .search-bar input[type=text] {
+  border: 2px black solid;
+  padding: 0.75em 1em;
+  font-size: 1.5rem;
+  border-radius: 0.5em;
+}
+
+.books-section .infinite {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding-right: 4em;
+  gap: 2.5em;
+}
+
+.card-section {
+  border: 2px black solid;
+  border-radius: 16px;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: space-between;
+}
+.card-section .book-image {
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+}
+.card-section .book {
+  border: 1px black solid;
+}
+.card-section .book-title {
+  font-size: 1rem;
+}
+.card-section div h3 {
+  font-size: 1.75rem;
+}
+.card-section div + div {
+  display: flex;
+  flex-direction: column;
+}
+.card-section .button {
+  background-color: #BA181B;
+  color: white;
+  padding: 1em;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  font-family: "Roboto Slab", serif;
+  border-radius: 8px;
+  border: none;
+  transition: 250ms ease;
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1rem;
+  width: 100%;
+}
+.card-section .button:hover {
+  background-color: #55090b;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  border: red;
+}
+
+.loader {
+  font-size: 2rem;
+  -webkit-animation: color-fade 500ms infinite;
+          animation: color-fade 500ms infinite;
+  margin-bottom: 2em;
+  font-weight: 600;
+}
+
+@-webkit-keyframes color-fade {
+  0% {
+    color: black;
+  }
+  50% {
+    color: #E5383B;
+  }
+  100% {
+    color: black;
+  }
+}
+
+@keyframes color-fade {
+  0% {
+    color: black;
+  }
+  50% {
+    color: #E5383B;
+  }
+  100% {
+    color: black;
+  }
 }/*# sourceMappingURL=general.css.map */

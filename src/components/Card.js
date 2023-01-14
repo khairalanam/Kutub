@@ -1,7 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-const Card = ({ bookData }) => {
+const Card = ({ bookData, publicKey }) => {
   return (
     <section className="card-section">
       <div>
@@ -24,8 +25,14 @@ const Card = ({ bookData }) => {
         <h5 style={{ color: "#999999", marginTop: "0.5em" }}>
           Downloads: {bookData.download_count}
         </h5>
-        <h3>§ {Math.round(bookData.id / 10)}</h3>
-        <button>Buy this Book</button>
+        <h3>§ {bookData.id / 10000}</h3>
+        <Link
+          href="/books/checkout"
+          className="button"
+          enabled={publicKey !== null}
+        >
+          Buy this Book
+        </Link>
       </div>
     </section>
   );
