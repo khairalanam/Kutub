@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto Slab", serif;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+nav {
+  z-index: 2;
+  display: flex;
+  padding: 2em 4em;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+nav .logo-main {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+nav .logo-main .logo {
+  width: 3em;
+}
+nav .logo-main h1 {
+  font-weight: 400;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+  align-items: center;
+}
+nav ul .nav-links {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: black;
+}
+nav ul .nav-links:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+nav ul #github {
+  width: 2em;
+}
+
+.hero-section, .about-section {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 4em;
+  padding-right: 0;
+}
+.hero-section .hero-text, .about-section .hero-text {
+  padding-top: 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.hero-section .hero-text h1, .about-section .hero-text h1 {
+  font-weight: 400;
+  font-size: 3rem;
+}
+.hero-section .hero-text h1 div, .about-section .hero-text h1 div {
+  display: inline;
+  color: #E5383B;
+}
+.hero-section .btn-search, .about-section .btn-search {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 8px;
+  background-color: #E5383B;
+  transition: 250ms ease;
+  margin: 0 auto;
+  margin-left: 0;
+}
+.hero-section .btn-search:hover, .about-section .btn-search:hover {
+  background-color: #811719;
+}
+.hero-section .btn-search:active, .about-section .btn-search:active {
+  background-color: #490809;
+}
+.hero-section .gif-holder, .about-section .gif-holder {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  box-shadow: 0px 0px 13em 1em rgba(0, 0, 0, 0.25);
+}
+.hero-section .gif-holder #book-lover, .about-section .gif-holder #book-lover {
+  width: 22em;
+}
+.hero-section .gif-holder #book-lover svg + svg, .about-section .gif-holder #book-lover svg + svg {
+  display: none;
+}
+
+footer {
+  position: absolute;
+  padding: 0.25em 0.5em;
+  font-size: 0.75rem;
+  bottom: 0;
+}
+
+.about-section .hero-text p {
+  width: calc(60% - 8em);
+}/*# sourceMappingURL=general.css.map */
