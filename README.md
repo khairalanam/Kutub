@@ -2,11 +2,12 @@
 
 Link One: https://kutub.vercel.app/  <br/>
 Link Two: https://kutub-khairalanam.vercel.app/ <br/>
-Replit Link: https://replit.com/@khairalanam/CPFolio-Platform?v=1
+Replit Link: https://replit.com/@khairalanam/Kutub-Website?v=1 <br/>
+Figma Design: https://www.figma.com/file/5hs2ySLTLJqf5xB7ajowns/KUTUB---Design?node-id=0%3A1&t=JuuZGFLDeIsTg7tS-1
 
 ## Summary
 
-CPFolio is a platform where the information about all the coding contests hosted by major competitive programming platforms like CodeChef, CodeForces, HackerRank etc, are gathered in one place. This helps students to find coding contests easily without the hassle of going through each platform and find them.
+Kutub is not just a bookstore. It’s a one-of-a-kind bookstore. It’s the bookstore of the Web 3.0. When you browse through the huge collection of 100,000+ books we have, the books that you have paid for are secured by blockchain via Solana Pay
 
 ## Problem
 
