@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto Slab', serif;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+nav {
+    z-index: 2;
+    display: flex;
+    padding: 2em 4em;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    .logo-main {
+        display: flex;
+        gap: 1em;
+        align-items: center;
+
+        .logo {
+            width: 3em;
+        }
+
+        h1 {
+            font-weight: 400;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 3em;
+        align-items: center;
+
+        .nav-links {
+            text-decoration-line: none;
+            color: black;
+
+            &:hover {
+                text-decoration-line: underline;
+            }
+        }
+
+        #github {
+            width: 2em;
+        }
+    }
+}
+
+.hero-section, .about-section, .social-section, .books-section {
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4em;
+    padding-right: 0;
+
+    .hero-text {
+        padding-top: 4em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        h1 {
+            font-weight: 400;
+            font-size: 3rem;
+
+            div {
+                display: inline;
+                color: #E5383B;
+            }
+        }
+    }
+
+    .btn-search {
+        text-decoration-line: none;
+        color: white;
+        padding: 1em 2em;
+        border-radius: 8px;
+        background-color: #E5383B;
+        transition: 250ms ease;
+        margin: 0 auto;
+        margin-left: 0;
+
+        &:hover {
+            background-color: #811719;
+        }
+
+        &:active {
+            background-color: #490809;
+        }
+    }
+
+    .gif-holder {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        box-shadow: 0px 0px 13em 1em rgba(0, 0, 0, 0.25);
+
+
+        #book-lover {
+            width: 22em;
+    
+            svg + svg {
+                display: none;
+            }
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    padding: 0.25em 0.5em;
+    font-size: 0.75rem;
+    bottom: 0;
+}
+
+.about-section .hero-text p {
+    width: calc(60% - 8em);
+}
+
+.social-section ul{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.social-links {
+    font-size: 2rem;
+    text-decoration-line: none;
+    color: #E5383B;
+    transition: 250ms ease;
+
+    &:hover {
+        color: #811719;
+    }
+
+    &:active {
+        color: #490809;
+    }
+}
+
+.books-section {
+    flex-direction: column;
+    gap: 4em;
+    
+    .search-bar {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding-right: 4em;
+
+        h2 {
+            font-weight: 500;
+        }
+
+        input[type=text] {
+            border: 2px black solid;
+            padding: 0.75em 1em;
+            font-size: 1.5rem;
+            border-radius: 0.5em;
+        }
+    }
+}
+
+.books-section .infinite {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-right: 4em;
+    gap: 2.5em;
+}
+
+.card-section {
+    border: 2px black solid;
+    border-radius: 16px;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: space-between;
+
+    .book-image {
+        margin-bottom: 1em;
+        display: flex;
+        justify-content: center;
+    }
+
+    .book {
+        border: 1px black solid;
+
+    }
+
+    .book-title {
+        font-size: 1rem;
+    }
+
+    div h3 {
+        font-size: 1.75rem;
+    }
+
+    div button {
+        background-color: #BA181B;
+        color: white;
+        padding: 1em;
+        font-family: 'Roboto Slab', serif;
+        border: none;
+        border-radius: 8px;
+        transition: 250ms ease;
+        margin-top: 1em;
+        font-size: 1rem;
+        width: 100%;
+
+        &:hover {
+            background-color: #55090b;
+            cursor: pointer;
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    border: red;
+}
+
+.loader {
+    font-size: 2rem;
+    animation: color-fade 500ms infinite;
+    margin-bottom: 2em;
+    font-weight: 600;    
+}
+
+@keyframes color-fade {
+    0% {
+        color: black;
+    }
+    50% {
+        color: #E5383B;
+    }
+    100% {
+        color: black;
+    }
+  }
